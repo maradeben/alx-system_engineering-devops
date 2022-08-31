@@ -12,3 +12,4 @@
 - 11-lists: list contents of current directory, it's parent, and /boot, including hidden, in long format
 - 12-file_type : checks the type of iamafile
 - 13-symbolic_link : create a symbolic link to /bin/ls
+- 14-copy_html : copy html files from dir to pnrent, excluding those present in parent or wnth more recen versions in parent
