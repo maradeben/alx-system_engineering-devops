@@ -9,3 +9,4 @@
 - 8-firstdelete : delete the file 'betty'
 - 9-firstdirdeletion : delete 'my_first_directory'
 - 10-back: changed directory to previous one
+- 11-lists: list contents of current directory, it's parent, and /boot, including hidden, in long format
