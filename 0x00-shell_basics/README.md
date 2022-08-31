@@ -10,3 +10,4 @@
 - 9-firstdirdeletion : delete 'my_first_directory'
 - 10-back: changed directory to previous one
 - 11-lists: list contents of current directory, it's parent, and /boot, including hidden, in long format
+- 12-file_type : checks the type of iamafile
