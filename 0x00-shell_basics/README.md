@@ -3,3 +3,4 @@
 - 2-bring_me_home : changes to home directory
 - 3-listfiles : display contents of working directory in long format
 - 4-listmorefiles : display contents of directory including hidden
+- 5-listfilesdigitonly : display numeric names of files, including hidden, in long format
