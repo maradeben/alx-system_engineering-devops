@@ -11,3 +11,4 @@
 - 10-back: changed directory to previous one
 - 11-lists: list contents of current directory, it's parent, and /boot, including hidden, in long format
 - 12-file_type : checks the type of iamafile
+- 13-symbolic_link : create a symbolic link to /bin/ls
