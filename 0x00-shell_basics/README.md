@@ -1,1 +1,2 @@
-- 0-current_working_directory - Prints the absolute path of current working directory
+- 0-current_working_directory : prints the absolute path of current working directory
+- 1-listit : displays contents of current directory
