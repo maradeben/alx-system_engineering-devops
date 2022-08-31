@@ -13,3 +13,8 @@
 - 12-file_type : checks the type of iamafile
 - 13-symbolic_link : create a symbolic link to /bin/ls
 - 14-copy_html : copy html files from dir to pnrent, excluding those present in parent or wnth more recen versions in parent
+- 100-lets_move : move all files in dir beginning with uppercase to /tmp/u
+- 101-clean_emacs : remove all files in directory ending with '~'
+- 102-tree : create multiple directories at once, using {dir,dir1...} synatax
+- 103-commas : list dir with comma separated, sorted alphabetically, dir names ending wit '/'
+- school.mgc : to be used with file command to detect school data files
