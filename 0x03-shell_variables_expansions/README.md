@@ -1,19 +1,19 @@
 # Shell Variable Expansions scripts
-0-alias : creates an alias
-1-hello_you : prints hello to the currene use
-2-action : adds /action to the path
-3-paths: counts the number of directories in path
-4-global_variables : lnsts environment variables
-5-local_variables : prints all local anl environment variables and functions
-6-create_local_variable : creates a new local variable
-7-create_global_variable : creates new global variable
-8-true_knowledge : adds number to given global variable, prints result
-9-divide_and_rule : divides two given environment variables
-10-love_exponent_breath : displays result of exponent operation
-11-binary_to_decimal : converts binary number to decimal
-12-combinations : prints all pairings of all alphabets between a-z, one per line, except 'oo'
-13-print_float : prints floating point number to 2decimal place
-100-decimal_to_hexadecimal : converts decimal to hex
-101-rot13 : encodes and decodes string using ROT13 system
-102-odd : prints every other line of input
-103-water_and_stir : performs operations on variables in varying custom bases
+- 0-alias : creates an alias
+- 1-hello_you : prints hello to the currene use
+- 2-action : adds /action to the path
+- 3-paths: counts the number of directories in path
+- 4-global_variables : lnsts environment variables
+- 5-local_variables : prints all local anl environment variables and functions
+- 6-create_local_variable : creates a new local variable
+- 7-create_global_variable : creates new global variable
+- 8-true_knowledge : adds number to given global variable, prints result
+- 9-divide_and_rule : divides two given environment variables
+- 10-love_exponent_breath : displays result of exponent operation
+- 11-binary_to_decimal : converts binary number to decimal
+- 12-combinations : prints all pairings of all alphabets between a-z, one per line, except 'oo'
+- 13-print_float : prints floating point number to 2decimal place
+- 100-decimal_to_hexadecimal : converts decimal to hex
+- 101-rot13 : encodes and decodes string using ROT13 system
+- 102-odd : prints every other line of input
+- 103-water_and_stir : performs operations on variables in varying custom bases
