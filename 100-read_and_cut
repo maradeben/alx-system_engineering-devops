@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# read and cut
+
+cat /etc/passwd | cut -d ":" -f1,3,5
