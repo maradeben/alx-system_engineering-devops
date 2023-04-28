@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+# display time for 12 hours
 
 hour=0
-while [ $hour -lt 12 ]
+while [ $hour -le 12 ]
 do
 	echo "Hour: ""$hour"
 	minute=1

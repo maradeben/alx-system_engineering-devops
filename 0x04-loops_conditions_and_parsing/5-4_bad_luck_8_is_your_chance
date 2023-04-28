@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+# 1 - 10 with 4 and 8 as bad luck
 
 x=1
 while [ $x -le 10 ]
