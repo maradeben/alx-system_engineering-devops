@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 # print string on receiving SIGTERM signal
 
 while :
