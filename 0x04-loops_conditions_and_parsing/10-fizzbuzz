@@ -13,6 +13,6 @@ elif [ $(( i % 5 )) -eq 0 ]
 then
 	echo "Buzz"
 else
-	echo i
+	echo $i
 fi
 done
