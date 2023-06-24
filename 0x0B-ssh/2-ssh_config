@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# config to authenticate with with private key, not password
+
+PasswordAuthentication no
+IdentityFile ~/.ssh/school
