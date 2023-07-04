@@ -14,13 +14,10 @@ backend webservers
 	server 134815-web-01 54.83.167.170 check
 	server 134815-web-02 54.221.184.104 check
 "
-
-apt-get -y update
-apt-get -y upgrade
-
 apt-get -y install software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-2.5
 apt-get -y update
+apt-get -y install haproxy=2.5.\*
 
 # installing HAProxy
 apt-get -y install haproxy
