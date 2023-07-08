@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# show DNS records
+
+rec_printer ()
+{
+	printf "The subdomain %s is a " "$2"
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk - F' ' '{ printf $4 }'
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F' ' '{ printf $5 }'
+	echo ""
+}
+
+if [ -z "$2" ]; then
+	for subds in "www" "lb-01" "web-01" "web-02"
+	do
+		rec_printer "$1" "$subs"
+	done
+else
+	rec_printer "$1" "$2"
+fi
