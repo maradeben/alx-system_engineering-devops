@@ -40,5 +40,5 @@ if __name__ == '__main__':
 
     # write to csv
     with open('USER_ID.csv', 'w', newline='') as file:
-        writer = csv.writer(file, delimiter=',')
+        writer = csv.writer(file, delimiter=',', quoting=csv.QUOTE_ALL)
         writer.writerows(all_rows)
