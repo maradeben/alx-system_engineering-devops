@@ -33,7 +33,6 @@ if __name__ == '__main__':
     completed_tasks_list = []
     for todo in todo_json:
         if todo.get('userId') == id:
-            print(name, todo['id'])
             total_task += 1
             if todo.get('completed'):
                 completed_tasks += 1
