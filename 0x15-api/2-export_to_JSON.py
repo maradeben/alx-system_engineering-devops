@@ -2,10 +2,10 @@
 """
 get data from API, retrieving TODO list data
 given employee ID
-export result to CSV
+export result to JSON
 """
 
-import csv
+import json
 import requests
 from sys import argv
 
@@ -30,15 +30,20 @@ if __name__ == '__main__':
 
     # parse data
     name = user_dict[id]
-    all_rows = []
+    all_tasks = []
+    data = {str(id): all_tasks}
     for todo in todo_json:
         if todo.get('userId') == id:
-            all_rows.append([str(id), name,
-                            todo.get('completed'), todo.get('title')])
+            task_dict = {
+                "task": todo.get('title'),
+                "completed": todo.get('completed'),
+                "username": name
+            }
+            all_tasks.append(task_dict)
+
             if todo.get('userId') != id:
                 break
 
     # write to csv
-    with open('USER_ID.csv', 'w', newline='') as file:
-        writer = csv.writer(file, delimiter=',')
-        writer.writerows(all_rows)
+    with open('USER_ID.json', 'w') as file:
+        json.dump(data, file)
