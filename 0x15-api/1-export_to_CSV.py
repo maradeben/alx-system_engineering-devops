@@ -21,7 +21,7 @@ if __name__ == '__main__':
     user_json = user_resp.json()
     user_dict = {}
     for user in user_json:
-        user_dict[user['id']] = user.get('name')
+        user_dict[user['id']] = user.get('username')
 
     # retrieve todo data
     todo_url = "https://jsonplaceholder.typicode.com/todos"
