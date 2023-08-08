@@ -8,7 +8,7 @@ import requests
 
 def count_words(subreddit, word_list, after='', word_dict={}):
     """
-    count
+    count the words
     """
 
     if not word_dict:
