@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 """
-query Reddit API and hot (top 10) posts of a subreddit.
+query Reddit API recursively for list of hots
 """
 import requests
 
 
 def recurse(subreddit, hot_list=[], after="", count=0):
-    """ get subreddit subscribers
+    """ get recursively
 
     Args:
         subreddit(str): subreddit name
+        hot_list(list): [] list to hold hot topics
+        after(str): "" to hold the after parameter
+        count(int): 0 of topics found
     """
 
     if subreddit is None or type(subreddit) is not str:
@@ -22,7 +25,8 @@ def recurse(subreddit, hot_list=[], after="", count=0):
         "limit": 100
     }
 
-    resp = requests.get(url, headers=headers, params=params)
+    resp = requests.get(url, headers=headers, params=params,
+                        allow_redirects=False)
     if resp.status_code == 404:
         return (None)
 
