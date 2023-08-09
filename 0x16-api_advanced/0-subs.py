@@ -23,8 +23,9 @@ def number_of_subscribers(subreddit):
     headers = {'User-Agent': 'alx-devops-0x16 - maradeben'}
     resp = requests.get(url, headers=headers, allow_redirects=False)
 
-    if resp.status_code == 404:
-        # check if the subreddit does not exist
+    if resp.status_code == 200:
+        # confirm that the sub exists
+        resp_json = resp.json()
+        return (resp_json.get('data').get('subscribers'))
+    else:
         return (0)
-    resp_json = resp.json()
-    return (resp_json.get('data').get('subscribers'))
