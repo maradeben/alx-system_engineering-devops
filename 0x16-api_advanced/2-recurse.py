@@ -27,16 +27,17 @@ def recurse(subreddit, hot_list=[], after="", count=0):
 
     resp = requests.get(url, headers=headers, params=params,
                         allow_redirects=False)
-    if resp.status_code == 404:
-        return (None)
+    if resp.status_code == 200:
+        resp_json = resp.json().get('data')
+        after = resp_json.get("after")
+        count += resp_json.get("dist")
+        children = resp_json.get('children')
+        for child in children:
+            hot_list.append(child.get('data').get('title'))
 
-    resp_json = resp.json().get('data')
-    after = resp_json.get("after")
-    count += resp_json.get("dist")
-    children = resp_json.get('children')
-    for child in children:
-        hot_list.append(child.get('data').get('title'))
-
-    if after is not None:
-        return recurse(subreddit, hot_list, after, count)
-    return (hot_list)
+        if after is not None:
+            return (hot_list)
+        else:
+            return recurse(subreddit, hot_list, after, count)
+    else:
+        return(None)
