@@ -17,10 +17,10 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {'User-Agent': 'alx-devops-0x16 - maradeben'}
     resp = requests.get(url, headers=headers, allow_redirects=False)
-    if resp.status_code == 404:
+    if resp.status_code == 200:
+        resp_json = resp.json()
+        children = resp_json.get('data').get('children')
+        for child in children:
+            print(child.get('data').get('title'))
+    else:
         print(None)
-
-    resp_json = resp.json()
-    children = resp_json.get('data').get('children')
-    for child in children:
-        print(child.get('data').get('title'))
